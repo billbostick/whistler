@@ -1,0 +1,226 @@
+.page-left {
+background: url(../images/blue/page-left.png) repeat-y 0 0;   
+}
+
+.page-right {
+background: url(../images/blue/page-right.png) repeat-y scroll 100% 100%;
+}
+
+#header, #content {
+background:#006699 url(../images/blue/masthead-bg.png) repeat-x scroll 0 0;
+}
+
+#sidebar-left h2,
+#sidebar-left  h2.title,
+#sidebar-left {
+  color:#fff;
+}
+
+#sidebar-left a {
+  color:#fff;
+}
+
+body.sidebar-left #mcc, 
+body.sidebars #mcc { 
+	background-color: #fff;
+	background-image: url(../images/blue/sidebar-bg.png);
+	background-repeat: repeat-y;
+}
+
+#squeeze {
+  background:#FFFFFF url(../images/blue/page-top.png) repeat-x scroll 0 0;
+}
+
+body {
+  color: #000;
+  background-color: #ccc;
+}
+
+tr.odd, tr.even {
+  border-bottom: 1px solid #a0a0a0;
+}
+
+thead th {
+  border-bottom: 3px solid #a0a0a0;
+}
+
+tr.odd {
+background-color: #EEF4F7;
+}
+
+tr.even {
+background-color: #ffffff;
+}
+
+#site-name a, #site-name a:hover {
+  color: #fff;
+}
+
+#site-slogan {
+  color: #fff;
+}
+
+.messages {
+  background-color: #EEF4F7;
+  border: 1px solid #E3E3E3;
+}
+
+#footer-wrapper {
+  color: #fff;
+}
+
+#footer-wrapper a {
+  color: #e3e3e3;
+}
+
+#footer-wrapper {
+background: #333 url(../images/blue/grey-footer-top.png) repeat-x 100% 100%;
+}
+
+.sticky {
+  background-color: #eee;
+  border: solid 1px #ddd;
+}
+
+div.admin-panel .body {
+	border: 1px solid #E3E3E3 ;
+}
+
+#section1, #section2 {
+  background:#333333 url(../images/blue/grey-mast-top.png) repeat-x scroll 0 0;
+  border-bottom: 1px solid #777;
+}
+
+#section1 {
+  color: #fff;
+}
+
+#section1 a,
+#section1 a:link,
+#section1 a:visited,
+#section1 .title, #section1  .title a {
+  color: #fff;
+}
+
+/* from blue.css */
+
+body {
+  color: #292929;		/* font color */
+}
+
+a:link,
+a:visited,
+.title, .title a,
+.submitted,
+.links,
+.node .taxonomy,
+#aggregator .news-item .categories, #aggregator .source, #aggregator .age,
+#forum td .name,
+div.admin-panel .description {
+  color: #006699;
+}
+
+a:hover {
+  color: #960B19;
+}
+
+
+/* Menu styles */
+
+/* Primary and Secondary links */
+
+#nav-bottom {
+	background: #202020;
+}
+
+#suckerfishmenu,
+#primary {
+  background: #006699 url(../images/blue/nav-top.png) repeat-x 0 0;
+}
+
+#suckerfishmenu	 a,
+#primary a {
+  border-top: 1px solid #0088bb;
+  border-left: 1px solid #0088bb;
+  color: #fff;
+  background:#006699 url(../images/blue/nav-divider.png) repeat-y scroll 100% 50%;
+}
+
+#suckerfishmenu	 a:active,
+#primary a.active {
+  border-top: 1px solid #F0F0F0;
+  border-left: 1px solid #F0F0F0;
+  color: #000;
+  background:#e3e3e3 url(../images/blue/nav-divider-active-left.png) repeat-y scroll 100% 50%;
+}
+
+#suckerfishmenu	 a:hover,
+#primary a:hover {
+  border-top: 1px solid #656565;
+  border-left: 1px solid #656565;
+  background:#444 url(../images/blue/nav-divider-active-left.png) repeat-y scroll 100% 50%;
+  color: #fff;
+}
+
+#suckerfishmenu ul.menu ul,
+#secondary {
+  background: #444;
+	border-top:1px solid #202020;
+}
+
+.sf-menu ul ul {
+  border-top: none;
+}
+
+#suckerfishmenu	 ul.menu li li a:link,
+#suckerfishmenu	 ul.menu li li a:visited,
+#suckerfishmenu	 ul.sf-menu li li a,
+#secondary li a {
+	border-right:1px solid #999999;
+  color: #fff;
+  background: #444;
+  border-top: 1px solid #656565;
+  border-left: 1px solid #656565;
+}
+
+#suckerfishmenu	 ul.menu li li a.active:hover,
+#suckerfishmenu	 ul.sf-menu li a.active:hover,
+#suckerfishmenu	 li li a:hover,
+#secondary a.active:hover {
+  border-top: 1px solid #F0F0F0;
+  border-left: 1px solid #F0F0F0;
+  color: #000;
+  background: #c3c3c3;
+}
+
+#suckerfishmenu	 ul.menu li li a:hover,
+#suckerfishmenu	 ul.menu li li a.active,
+#suckerfishmenu	 ul.sf-menu li li a:hover,
+#suckerfishmenu	 ul.sf-menu li li a.active,
+#secondary a:hover,
+#secondary a.active {
+  border-top: 1px solid #F0F0F0;
+  border-left: 1px solid #F0F0F0;
+  color: #000;
+  background: #e3e3e3;
+}
+
+#mission {
+  border: solid 1px #006699;
+  color: #000;
+}
+
+.comment {
+  border: 1px solid #006699;
+}
+
+
+#profile .profile {
+  border: 1px solid #006699;
+}
+
+/* another son of suckerfish...
+http://www.htmldog.com/articles/suckerfish/dropdowns/
+http://www.alistapart.com/articles/horizdropdowns
+*/
+

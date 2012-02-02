@@ -1,0 +1,772 @@
+/* layout */
+
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 750px;      
+}
+
+#page-container {
+  font-size:.86em;
+  font-family:'Lucida Grande','Lucida Sans Unicode','Lucida','Helvetica Neue','Helvetica',Verdana,Arial,sans-serif;
+  font-size-adjust:none;
+  font-style:normal;
+  font-variant:normal;
+  line-height:1.5em;
+   margin: 0 auto;
+width:95%;
+padding: 0 2px;
+}
+
+#page {
+   width: 100%;
+   margin: 0 2px;
+}
+
+
+#header, #content {
+  width: 100%;
+}
+
+#banner,
+#banner p {
+  margin-top: 0;
+	margin-bottom:0;
+  line-height:0;
+}
+
+
+#banner .block {
+  margin: 0;
+	padding: 0;
+  line-height:0;
+	font-size:0;
+	overflow:hidden;
+}
+
+
+.sections {
+	width: 100%;
+	padding: 0;
+}
+
+
+.block {
+	margin: 5px;
+	padding: 5px;
+}
+
+.section .block {
+	padding: 10px;
+}
+
+.section.width49 {
+	width: 50%;
+}
+
+.section.width33 {
+	width: 33%;
+}
+
+.section.width24 {
+	width: 25%;
+}
+
+.sections {
+	width: 100%;
+}
+
+#mcc {
+  width:100%;
+}
+
+#middlecontainer {
+margin: 0 auto;
+}
+
+#sidebar-left, #sidebar-right {
+	width: 210px;
+	float:left;
+	z-index: 2;
+	position: relative;
+  font-size: 90%;
+  line-height:1.4em;
+}
+
+#section1 {
+  font-size: 90%;
+  line-height:1.4em;
+}
+
+#main #section1 h2.title, #sidebar-left h2.title, #sidebar-right h2.title {
+  font-size: 125%;
+}
+
+#main {
+float: left;
+width:100%;
+}
+
+body.sidebar-left #mcc, 
+body.sidebars #mcc { 
+	background-position: -710px 0;
+  display:table;
+}
+
+body.sidebar-left #main {
+	margin-left: -210px;
+	margin-right: 0;
+}
+
+body.sidebar-right #main {
+	margin-right: -210px;
+	margin-left: 0;
+}
+
+body.sidebars #main {
+	margin-left: -210px;
+	margin-right: -210px;
+}
+
+body.sidebar-left #squeeze {
+	margin-left: 210px;
+	margin-right: 0;
+}
+
+body.sidebar-right #squeeze {
+	margin-right: 210px;
+	margin-left: 0;
+}
+
+body.sidebars #squeeze {
+	margin-left: 210px;
+	margin-right: 210px;
+}
+
+#squeeze-contents {
+	padding: 10px;
+}
+
+/* various overrides */
+
+tbody {
+   border: none;
+}
+
+/* typography */
+
+tr.odd td, tr.even td {
+  padding: 0.3em;
+}
+
+tbody {
+  border-top: none;
+}
+
+h1, h2, h3, h4, h4 {
+	padding-bottom: 5px;
+	margin: 10px 0;
+	line-height:125%;
+}
+
+h1 {
+	font-size: 160%;
+}
+
+h2 {
+	font-size: 125%;
+}
+
+h3 { 
+   font-size: 110%;
+}
+
+h4 {
+	font-size:  100%;
+}
+
+#main h2.title {
+   font-size: 150%;
+}
+
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.9em;
+}
+
+/* links */
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* elements */
+
+fieldset {
+  border: 1px solid #ccc;
+}
+pre {
+  background-color: #eee;
+  padding: 0.75em 1.5em;
+  font-size: 12px;
+  border: 1px solid #ddd;
+}
+
+table {
+  font-size: 1em;
+}
+/* header elements */
+
+#masthead {
+  float: none;
+  clear: both;
+  line-height: normal;
+}
+
+#name-and-slogan {
+	float:left;
+	padding-bottom:20px;
+  padding-left:20px;
+	text-align:center;
+}
+
+#site-name {
+	padding-top: 20px;
+    margin: 0;
+}
+
+#site-name a, #site-name a:hover {
+  font-weight: normal;
+  font-size: 200%;
+  margin: 0;
+  padding: 0;
+}
+
+#site-slogan {
+  margin: 0;
+  font-size: 125%;
+  display: inline;
+}
+
+#logo-title {
+  float: left
+}
+
+img#logo  {
+	padding: 20px;
+  margin: 0;
+}
+
+img#roopletheme {
+  width: 100px;
+  height: 20px;
+}
+
+#search {
+  padding-top: 25px;
+  padding-right: 20px;
+  float: right;
+}
+
+/* search box */
+
+#search .form-text, #search .form-submit {
+  font-size: 1.1em;
+  height: 1.5em;
+  vertical-align: middle;
+}
+
+#search .form-text {
+  width: 8em;
+  padding: 0 0.5em;
+}
+
+/* drupal elements */
+
+#mission {
+  font-weight:bold;
+  text-align:center;
+  padding: .5em 1em;
+  margin-top:20px;
+  margin-bottom:20px;
+  font-size: 85%;
+}
+
+.form-item label {
+  font-size: 1em;
+  color: #222;
+}
+.item-list .title {
+  color: #222;
+}
+
+.comment .links {
+  margin-bottom: 0;
+}
+
+.clr {
+	clear: both;
+}
+
+ul.links li {
+  padding: 0;
+}
+ul.links li.first {
+  border: none;
+}
+
+a.readon,
+a:hover.readon {
+	margin-top: 15px;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+
+	font-weight: bold;
+	text-decoration: none;
+	text-align: center;
+}
+
+#help {
+  font-size: 0.9em;
+  margin-bottom: 1em;
+}
+
+.messages {
+  padding: 0.3em;
+  margin-bottom: 1em;
+}
+.error {
+  border-color: red;
+}
+
+#footer-region {
+  text-align: center;
+}
+
+#header .block {
+  text-align: center;
+}
+
+#footer-wrapper {
+  text-align: center;
+  margin:0;
+  font-size: 90%;
+  padding: 1em;
+}
+
+#footer-message a {
+  font-weight:bold;
+}
+
+#footer-wrapper {
+padding-bottom:20px;
+}
+
+div#breadcrumb {
+  clear: both;
+  font-size: 80%;
+  padding-top: 3px;
+}
+
+.title, .title a {
+  font-weight: bold;
+  margin: 0 auto;
+}
+.submitted {
+  font-size: 0.8em;
+}
+.links a {
+  font-weight: bold;
+}
+
+.block .title {
+  margin-bottom: .25em;
+}
+
+.node {
+  margin: 0;
+}
+
+.sticky {
+  padding: .5em;
+}
+.node .content, .comment .content {
+  margin: .5em 0 .5em 0;
+}
+.node .taxonomy {
+  font-size: 90%;
+}
+.node .taxonomy a {
+	font-weight:bold;
+}
+.node .picture {
+  float: right;
+  margin: 0.5em;
+}
+.comment {
+  padding: .5em;
+  margin-bottom: 1em;
+}
+
+.comment .title a {
+  font-weight: normal;
+}
+.comment .new {
+  text-align: right;
+  font-weight: bold;
+  font-size: 0.8em;
+  float: right;
+  color: red;
+}
+.comment .picture {
+  float: right;
+  margin: 0.5em;
+}
+
+#aggregator .feed-source {
+  background-color: #eee;
+  border: 1px solid #ccc;
+  padding: 1em;
+  margin: 1em 0;
+}
+#aggregator .news-item .categories, #aggregator .source, #aggregator .age {
+  font-style: italic;
+  font-size: 0.9em;
+}
+#aggregator .title {
+  margin-bottom: 0.5em;
+}
+#aggregator h3 {
+  margin-top: 1em;
+}
+#forum table {
+  width: 100%;
+}
+#forum td {
+  padding: 0.5em;
+}
+#forum td.forum, #forum td.posts {
+  background-color: #eee;
+}
+#forum td.topics, #forum td.last-reply {
+  background-color: #ddd;
+}
+#forum td.container {
+  background-color: #ccc;
+}
+#forum td.container a {
+  color: #555;
+}
+#forum td.statistics, #forum td.settings, #forum td.pager {
+  height: 1.5em;
+  border: 1px solid #bbb;
+}
+#forum td .name {
+}
+#forum td .links {
+  padding-top: 0.7em;
+  font-size: 0.9em;
+}
+#profile .profile {
+  clear: both;
+  padding: .5em;
+  margin: 1em 0em;
+}
+#profile .profile .name {
+  padding-bottom: 0.5em;
+}
+.block-forum h3 {
+  margin-bottom: .5em;
+}
+div.admin-panel h3 {
+  padding: 5px 8px 5px;
+  margin: 0;
+}
+
+div.admin-panel dl dd {
+  font-size: 90%;
+}
+
+/* new */
+
+.section {
+	float: left;
+}
+
+
+#section1, #section2 {
+  padding-top: 10px;
+}
+
+.section1-bottom {
+  height: 0;
+}
+
+
+#content-top h2, #content-top h2.title,
+#content-bottom h2, #content-bottom h2.title {
+	font-size:125%;
+}
+
+/* custom typography styles */
+span.alert,
+span.help,
+span.info,
+span.note,
+span.info,
+span.errormsg,
+span.xfer {
+	display: block;
+	padding: 10px 10px 10px 10px;
+	margin: 0 10px;
+}
+
+span.alert {
+	background-color: #F3CECE;
+	border-top: 2px solid #d04040;
+	border-bottom: 2px solid #d04040;
+}
+
+span.errormsg {
+	background-color: #F3CECE;
+	border-top: 2px solid #d04040;
+	border-bottom: 2px solid #d04040;
+}
+
+span.help {
+	background-color: #CADAEF;
+	border-top: 2px solid #3060a0;
+	border-bottom: 2px solid #3060a0;
+}
+
+span.note {
+	background-color: #F8EFD0;
+	border-top: 2px solid #E6CC62;
+	border-bottom: 2px solid #E6CC62;
+}
+
+span.info {
+	background-color: #F8EFD0;
+	border-top: 2px solid #E6CC62;
+	border-bottom: 2px solid #E6CC62;
+}
+
+span.xfer {
+	background-color: #DDF8EB;
+	border-top: 2px solid #20a060;
+	border-bottom: 2px solid #20a060;
+}
+
+pre {
+	padding:10px;
+	background:#F8F8F8 none repeat scroll 0%;
+	border:1px solid #C0C0C0;
+	margin: 10px 0;
+}
+
+blockquote {
+	padding: 10px 10px 10px 30px;
+	font-style:italic;
+	font-size:110%;
+	line-height:130%;
+	color: #555;
+	margin: 15px;
+	background: transparent url(../images/blue/blockquote.gif) no-repeat scroll 0 5px;
+}
+
+/* Primary and Secondary links, Suckerfish Menus */
+
+#nav-bottom {
+  height: 1px;
+  line-height:0;
+	font-size:0;
+}
+
+#suckerfishmenu	 ul.menu,
+#primary ul {
+  padding:0;
+  margin:0;
+  list-style:none;
+  z-index: 3;
+  display: inline;
+}
+
+#suckerfishmenu	 li,
+#primary li {
+  display:inline;
+  display: inline;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
+
+#suckerfishmenu	 a,
+#primary a {
+  font-weight:normal;
+  display:block;
+  float:left;
+  padding:3px 20px 5px 20px;
+  font-size: 93%;
+	line-height:1.2em;
+	margin-top:1px;
+}
+
+#suckerfishmenu ul.sf-menu a {
+	margin-top:0;
+}
+
+#suckerfishmenu	 a:active,
+#primary a.active {
+  text-decoration: none;
+}
+
+#suckerfishmenu	 a:hover,
+#primary a:hover {
+  text-decoration: none;
+}
+
+#suckerfishmenu	 ul.menu ul,
+#secondary ul {
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+#secondary li {
+  margin:0;
+  padding:0;
+  display:inline;
+}
+
+#secondary li a {
+  float:left;
+  display:block;
+  font-size: 80%;
+  padding:0px 14px 2px;
+  font-weight:normal;
+}
+
+#secondary a:hover,
+#secondary a.active {
+  text-decoration: none;
+}
+
+/* another son of suckerfish...
+http://www.htmldog.com/articles/suckerfish/dropdowns/
+http://www.alistapart.com/articles/horizdropdowns
+*/
+
+#suckerfishmenu	.block {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+#suckerfishmenu	.block, #suckerfishmenu	.box {
+  padding: 0;
+}
+
+#suckerfishmenu	h2 {
+  display: none;
+}
+
+#suckerfishmenu .block {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* second-level lists */
+
+#suckerfishmenu	 ul.menu li ul {
+  position: absolute;
+  width: 200px;
+  left: -999em; /* to hide menus because display: none isn't read by screen readers */
+  margin: 25px 0 0 -108px;
+}
+
+
+#suckerfishmenu	 ul.menu li li {
+  float: left;
+  width: 200px;
+  margin-bottom: -1px;
+}
+
+#suckerfishmenu	 ul.menu li li a:link,
+#suckerfishmenu	 ul.menu li li a:visited {
+  width: 170px;
+}
+
+#suckerfishmenu	 ul.menu li ul a {
+  width: 200px;
+  font-size: 95%;
+}
+
+/* margin for pullouts */
+.sf-menu	 ul.menu li ul ul {
+  margin: -25px 0 0 160px;
+}
+
+#suckerfishmenu	 ul.menu li ul ul {
+  margin: 0;
+}
+
+#suckerfishmenu	 ul.menu li:hover ul ul, #suckerfishmenu	 ul.menu li:hover ul ul ul, #suckerfishmenu	 ul.menu li.sfhover ul ul, #suckerfishmenu	 ul.menu li.sfhover ul ul ul {
+  left: -999em;
+}
+
+#suckerfishmenu	 ul.menu li:hover ul, #suckerfishmenu	 ul.menu li li:hover ul, #suckerfishmenu	 ul.menu li li li:hover ul, #suckerfishmenu	 ul.menu li.sfhover ul, #suckerfishmenu	 ul.menu li li.sfhover ul, #suckerfishmenu	 ul.menu li li li.sfhover ul {
+  left: auto;
+}
+
+/* third level menus */
+
+#suckerfishmenu	 ul.menu li ul ul ul{
+  margin: -25px 0 0 199px;
+}
+
+#suckerfishmenu	 ul.menu ul li:hover ul ul, #suckerfishmenu	 ul.menu ul li:hover ul ul ul, #suckerfishmenu	 ul.menu ul li.sfhover ul ul, #suckerfishmenu	 ul.menu ul li.sfhover ul ul ul {
+  left: -999em;
+}
+
+#suckerfishmenu	 ul.menu ul li:hover ul, #suckerfishmenu	 ul.menu ul li li:hover ul, #suckerfishmenu	 ul.menu ul li li li:hover ul, #suckerfishmenu	 ul.menu ul li.sfhover ul, #suckerfishmenu	 ul.menu ul li li.sfhover ul, #suckerfishmenu	 ul.menu ul li li li.sfhover ul {
+  left: auto;
+}
+
+.block ul.sf-menu {
+  margin:0pt;
+	padding: 0;
+  width:100%;
+}
+
+.sf-menu li:hover ul, .sf-menu li.sfHover ul {
+  top: 25px;
+}
+
+.sf-menu ul a > .sf-sub-indicator {
+  top:7px;
+}
+
+.sf-menu ul,
+.sf-menu ul a {
+	width:			160px; /* left offset of submenus need to match (see below) */
+}
+
+.sf-menu ul ul,
+.sf-menu ul ul a {
+	width:			200px; /* left offset of submenus need to match (see below) */
+}
+
+ul.sf-menu li li:hover ul,
+ul.sf-menu li li.sfHover ul {
+	left:			200px; /* match ul width */
+}
+
+ul.sf-menu li li li:hover ul,
+ul.sf-menu li li li.sfHover ul {
+	left:			200px; /* match ul width */
+	top:			0;
+}
