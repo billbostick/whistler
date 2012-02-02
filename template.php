@@ -47,27 +47,6 @@ if (is_null(theme_get_setting('whistler_style'))) {
   theme_get_setting('', TRUE);
 }
 
-function whistler_regions() {
-  return array(
-    'sidebar_left' => t('left sidebar'),
-    'sidebar_right' => t('right sidebar'),
-    'content_top' => t('content top'),
-    'content_bottom' => t('content bottom'),
-    'header' => t('header'),
-		'banner' => t('banner'),
-    'suckerfish' => t('suckerfish menu'),
-    'user1' => t('user1'),
-    'user2' => t('user2'),
-    'user3' => t('user3'),
-    'user4' => t('user4'),
-    'user5' => t('user5'),
-    'user6' => t('user6'),
-    'user7' => t('user7'),
-    'user8' => t('user8'),
-    'footer_region' => t('footer')
-  );
-} 
- 
 function get_whistler_style() {
   $style = theme_get_setting('whistler_style');
   if (!$style)
@@ -102,16 +81,6 @@ function _phptemplate_variables($hook, $vars) {
   return $vars;
 }
 
-
-function whistler_block($block) {
-  if (module_exists('blocktheme')) {
-    if ( $custom_theme = blocktheme_get_theme($block) ) {
-      return _phptemplate_callback($custom_theme, array('block' => $block));
-    }
-  }
-  return phptemplate_block($block);
-}
-
 if (theme_get_setting('whistler_uselocalcontent')) {
   $local_content = drupal_get_path('theme', 'whistler') .'/'. theme_get_setting('whistler_localcontentfile');
   if (file_exists($local_content)) {
@@ -120,47 +89,51 @@ if (theme_get_setting('whistler_uselocalcontent')) {
 }
 
 
-function phptemplate_menu_links($primary_links){
-  if ($plinks = $primary_links) {
-    foreach ($plinks as $key => $link) {
-      if (stristr($key, 'active')) {
-        $plinks[$key]['attributes']['class'] = 'active';
-      }
-      $plinks[$key]['html'] = true;
-      $plinks[$key]['title'] = $link['title'];
-    }
-  return theme('links',$plinks, array('class' => 'links primary-links'));
-  }
-}
-
-// this code overrides drupals default theme_menu_tree in favor of the next routine
-function phptemplate_menu_tree($pid = 1) {
-  if ($tree = phptemplate_menu_tree_improved($pid)) {
-    return "\n<ul class=\"menu\">\n". $tree ."\n</ul>\n";
-  }
-}
-
-// This code adds several class selectors to menu items. We use the first and last class
-// in order to display the divider pipes between items in the footer menu
-function phptemplate_menu_tree_improved($pid = 1) {
-  $menu = menu_get_menu();
+function phptemplate_links($links, $attributes = array('class' => 'links')) {
   $output = '';
 
-  if (isset($menu['visible'][$pid]) && $menu['visible'][$pid]['children']) {
-    $num_children = count($menu['visible'][$pid]['children']);
-    for ($i=0; $i < $num_children; ++$i) {
-      $mid = $menu['visible'][$pid]['children'][$i];
-      $type = isset($menu['visible'][$mid]['type']) ? $menu['visible'][$mid]['type'] : NULL;
-      $children = isset($menu['visible'][$mid]['children']) ? $menu['visible'][$mid]['children'] : NULL;
-      $extraclass = $i == 0 ? 'first' : ($i == $num_children-1 ? 'last' : '');
-      $output .= theme('menu_item', $mid, menu_in_active_trail($mid) || ($type & MENU_EXPANDED) ? theme('menu_tree', $mid) : '', count($children) == 0, $extraclass);
+  if (count($links) > 0) {
+    $output = '<ul'. drupal_attributes($attributes) .'>';
+
+    $num_links = count($links);
+    $i = 1;
+
+    foreach ($links as $key => $link) {
+      $class = $key;
+
+      // Add first, last and active classes to the list of links to help out themers.
+      if ($i == 1) {
+        $class .= ' first';
       }
+      if ($i == $num_links) {
+        $class .= ' last';
+      }
+      if (isset($link['href']) && ($link['href'] == $_GET['q'] || ($link['href'] == '<front>' && drupal_is_front_page()))) {
+        $class .= ' active';
+      }
+      $output .= '<li'. drupal_attributes(array('class' => $class)) .'>';
+
+      if (isset($link['href'])) {
+        // Pass in $link as $options, they share the same keys.
+				$title = '<span class="left"><span class="center">'. $link['title']. '</span></span><span  class="right"></span>';
+				$link['html'] = TRUE;
+        $output .= l($title, $link['href'], $link);
+      }
+      else if (!empty($link['title'])) {
+        // Some links are actually not links, but we wrap these in <span> for adding title and class attributes
+        if (empty($link['html'])) {
+          $link['title'] = check_plain($link['title']);
+        }
+        $span_attributes = '';
+        if (isset($link['attributes'])) {
+          $span_attributes = drupal_attributes($link['attributes']);
+        }
+        $output .= '<span'. $span_attributes .'>'. $link['title'] .'</span>';
+      }
+      $i++;
+      $output .= "</li>\n";
+    }
+    $output .= '</ul>';
   }
   return $output;
 }
-
-// this function adds the expanded and collapsed class to menu items
-function phptemplate_menu_item($mid, $children = '', $leaf = TRUE, $extraclass = '') {
-  return '<li class="'. ($leaf ? 'leaf' : ($children ? 'expanded' : 'collapsed')) . ($extraclass ? ' ' . $extraclass : '') . '">'. menu_item_link($mid, TRUE, $extraclass) . $children ."</li>\n";
-}
-
